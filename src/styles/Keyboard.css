@@ -1,0 +1,130 @@
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Medium.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Medium.woff")
+      format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --hover-color: #949697;
+  --border-color: #949697;
+}
+
+.Keyboard-Wrapper {
+  display: grid;
+  row-gap: 0.7vw;
+  align-items: center;
+  margin-top: 3vh;
+}
+
+.Upper-Row {
+  display: grid;
+  grid-template-columns: repeat(10, 2.5vw);
+  gap: 1.5vw;
+}
+
+.Middle-Row {
+  display: grid;
+  grid-template-columns: repeat(9, 2.5vw);
+  gap: 1.5vw;
+}
+
+.Lower-Row {
+  display: grid;
+  grid-template-columns: repeat(9, 2.5vw);
+  gap: 1.5vw;
+}
+
+.Button {
+  font-family: "JetBrains Mono";
+  font-size: clamp(1vw, 1vw, 1vw);
+  width: clamp(3.5vw, 3.5vw, 3.5vw);
+  height: clamp(4.5vh, 3.5vh, 3.5vh);
+  background-color: #818384;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.Button:hover {
+  background-color: var(--hover-color);
+}
+
+.Green {
+  background-color: #538d4e;
+}
+
+.Yellow {
+  background-color: #c9b458;
+}
+
+.Black {
+  background-color: #3a3a3c;
+}
+
+.Grey {
+  background-color: #818384;
+}
+
+.Button.Green {
+  --hover-color: #6ea869;
+  --border-color: #6ea869;
+  animation: animate-green 1s 0.2s;
+}
+
+.Button.Grey {
+  --hover-color: #949697;
+  --border-color: #949697;
+}
+
+.Button.Yellow {
+  --hover-color: #e2ce77;
+  --border-color: #e2ce77;
+  animation: animate-yellow 0.5s 0.2s;
+}
+
+.Center-Wrapper {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.Special-R {
+  background-color: #818384 !important;
+}
+
+@keyframes animate-green {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes animate-yellow {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

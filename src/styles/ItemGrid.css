@@ -1,0 +1,6 @@
+.Item-Grid {
+  display: grid;
+  grid-template-columns: repeat(5, 5vw);
+  grid-template-rows: repeat(6, 5vw);
+  gap: 0.5em;
+}

@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Medium.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Medium.woff")
+      format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+.Item-Wrapper {
+  font-family: "JetBrains Mono";
+  font-size: 2vw;
+  width: clamp(5vw, 1vw, 5vw);
+  height: clamp(5vw, 1vh, 5vh);
+  border: 2px solid #3a3a3c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+}
+
+.BG-Black {
+  background-color: #3a3a3c;
+}
+
+.BG-Green {
+  background-color: #538d4e;
+  border: 2px solid #538d4e;
+  animation: animate-green 1s 0.2s;
+}
+
+.BG-Yellow {
+  background-color: #c9b458;
+  border: 2px solid #c9b458;
+  animation: animate-yellow 0.5s 0.2s;
+}
+
+@keyframes animate-green {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes animate-yellow {
+  10%,
+  90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}

@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff2/JetBrainsMono-Medium.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/gh/JetBrains/JetBrainsMono/web/woff/JetBrainsMono-Medium.woff")
+      format("woff");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background-color: #121213;
+}
+
+.Grid-Wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 7vh;
+}
+
+.keyboard-Wrapper-Wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5em;
+}
+
+.MuiSnackbarContent-message {
+  margin: auto;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.4rem;
+  padding: 2rem;
+}
+
+.MuiSvgIcon-root {
+  color: white !important;
+}
+
+.MuiAlert-message {
+  font-family: JetBrains Mono;
+}
