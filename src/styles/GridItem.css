@@ -12,8 +12,8 @@
 .Item-Wrapper {
   font-family: "JetBrains Mono";
   font-size: 2vw;
-  width: clamp(5vw, 1vw, 5vw);
-  height: clamp(5vw, 1vh, 5vh);
+  width: clamp(3.5vw, 1vw, 5vw);
+  height: clamp(3.5vw, 1vh, 5vh);
   border: 2px solid #3a3a3c;
   display: flex;
   justify-content: center;
