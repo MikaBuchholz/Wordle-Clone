@@ -23,27 +23,27 @@
 
 .Upper-Row {
   display: grid;
-  grid-template-columns: repeat(10, 2.5vw);
-  gap: 1.5vw;
+  grid-template-columns: repeat(10, 2vw);
+  gap: 2vw;
 }
 
 .Middle-Row {
   display: grid;
-  grid-template-columns: repeat(9, 2.5vw);
-  gap: 1.5vw;
+  grid-template-columns: repeat(9, 2vw);
+  gap: 2vw;
 }
 
 .Lower-Row {
   display: grid;
-  grid-template-columns: repeat(9, 2.5vw);
-  gap: 1.5vw;
+  grid-template-columns: repeat(9, 2vw);
+  gap: 2vw;
 }
 
 .Button {
   font-family: "JetBrains Mono";
   font-size: clamp(1vw, 1vw, 1vw);
-  width: clamp(3.5vw, 3.5vw, 3.5vw);
-  height: clamp(4.5vh, 3.5vh, 3.5vh);
+  width: clamp(3vw, 3.5vw, 3.5vw);
+  height: clamp(4vh, 3.5vh, 3.5vh);
   background-color: #818384;
   color: white;
   border: none;
