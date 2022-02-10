@@ -16,7 +16,7 @@ body {
 .Grid-Wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 7vh;
+  margin-top: 10.5vh;
 }
 
 .keyboard-Wrapper-Wrapper {
@@ -39,4 +39,17 @@ body {
 
 .MuiAlert-message {
   font-family: JetBrains Mono;
+}
+
+
+.New-Game-Wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 7.5vh;
+}
+
+.M-Button {
+  background-color: #1976D2 !important;
+  color: white !important;
+  font-family: JetBrains Mono !important;
 }
