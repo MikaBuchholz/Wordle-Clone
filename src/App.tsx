@@ -3,6 +3,8 @@ import ItemGrid from "./components/ItemGrid";
 import { words } from "./words/words";
 import Keyboard from "./components/Keyboard";
 import CustomSnackbar from "./components/CustomSnackbar";
+import { Button } from "@mui/material";
+import AutorenewIcon from "@mui/icons-material/Autorenew";
 import "./styles/App.css";
 
 function App() {
@@ -39,7 +41,7 @@ function App() {
     severity: "info",
   });
 
-  useEffect(() => {
+  const initData = () => {
     let data: {
       bColor: string;
       letter: string;
@@ -53,12 +55,12 @@ function App() {
     }
 
     setData(data);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  };
 
   useEffect(() => {
-    console.log(secrectWord);
-  }, [triggerUnique]);
+    initData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     if (gameInfo.tries === 6) {
@@ -70,7 +72,28 @@ function App() {
         severity: "info",
       });
     }
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [gameInfo.tries]);
+
+  const resetGame = () => {
+    setGameInfo({
+      ...gameInfo,
+      tries: 0,
+      gameOver: false,
+      showSnack: false,
+      message: "",
+      severity: "info",
+    });
+    setSecrectWord(
+      words[Math.floor(Math.random() * words.length)].toUpperCase()
+    );
+    setKeyboardColors([{ letter: "DEFAULT", color: "" }]);
+    setWord("");
+    setCurrentIndex(0);
+    setLetterIndex(0);
+    initData();
+  };
 
   const getLetterPos = (): number[] => {
     let letterPos: number[] = [];
@@ -230,6 +253,17 @@ function App() {
           deleteLetter={deleteLetter}
           keyboardColors={keyboardColors}
         />
+      </div>
+      <div className="New-Game-Wrapper">
+        {gameInfo.gameOver ? (
+          <Button
+            className="M-Button"
+            endIcon={<AutorenewIcon />}
+            onClick={resetGame}
+          >
+            New Game
+          </Button>
+        ) : null}
       </div>
     </>
   );
